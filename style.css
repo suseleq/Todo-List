@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(110deg, #2a0845, #6441A5);
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 100px auto;
+    max-width: 410px;
+    min-width: 310px;
+    background: #f5f5f5;
+    border-radius: 7px;
+    padding-bottom: 30px;
+}
+
+.container .todo-input {
+    margin: 30px 0 0 25px;
+    width: 360px;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 20px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+
+.container .todo-input:focus {
+    border: 1px solid #7e40f2;
+}
+
+.container .info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #afafaf;
+    padding: 20px;
+}
+
+.info :where(.all, .pending, .completed) {
+    cursor: pointer;
+    font-size: 20px;
+    pointer-events: all;
+}
+
+.info :where(.all, .pending, .completed):hover,
+.info :where(.all, .pending, .completed).active {
+    color: #6441A5;
+}
+
+.info .button-clear {
+    background:#6441A5;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.container .filter {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    pointer-events: none;
+}
+
+.todos .todo {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #afafaf;
+    margin: 20px 20px 0 20px;
+    padding: 10px 5px 20px 5px;
+    max-width: 400px;
+}
+
+.todo-content {
+    display: flex;
+}
+
+.todo-content p {
+    font-size: 18px;
+    max-width: 260px;
+}
+
+.todo-content i {
+    font-size: 23px;
+    color: #367538;
+    padding: 3px 10px 0 0;
+    cursor: pointer;
+}
+
+.todo .icons {
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+.icons .trash {
+    cursor: pointer;
+    color: #ff6868;
+}
+
+.icons .edit {
+    cursor: pointer;
+    color: #8997bf;
+}
+
+.todo.completed .todo-content p {
+    text-decoration: line-through;
+    color: #808080;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.todo.completed .todo-content i {
+    color: #808080;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.todo-container .no-task-info {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.todo-container .no-task-info.hidden {
+    display: none;
+}
+
+.container .edit-info{
+    display: flex;
+    margin: 30px 0 0 25px;
+    width: 360px;
+    height: 50px;
+    background: #d7c1ff;
+}
